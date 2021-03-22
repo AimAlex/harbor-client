@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/models"
+	"github.com/AimAlex/harbor-client/models"
 )
 
 // GetRegistriesReader is a Reader for the GetRegistries structure.

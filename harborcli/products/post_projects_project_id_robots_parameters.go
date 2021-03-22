@@ -16,7 +16,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/models"
+	"github.com/AimAlex/harbor-client/models"
 )
 
 // NewPostProjectsProjectIDRobotsParams creates a new PostProjectsProjectIDRobotsParams object

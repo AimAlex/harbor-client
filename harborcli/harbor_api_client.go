@@ -10,15 +10,15 @@ import (
 	httptransport "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
 
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/artifact"
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/auditlog"
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/icon"
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/preheat"
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/products"
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/project"
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/repository"
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/scan"
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/harborcli/scanners"
+	"github.com/AimAlex/harbor-client/harborcli/artifact"
+	"github.com/AimAlex/harbor-client/harborcli/auditlog"
+	"github.com/AimAlex/harbor-client/harborcli/icon"
+	"github.com/AimAlex/harbor-client/harborcli/preheat"
+	"github.com/AimAlex/harbor-client/harborcli/products"
+	"github.com/AimAlex/harbor-client/harborcli/project"
+	"github.com/AimAlex/harbor-client/harborcli/repository"
+	"github.com/AimAlex/harbor-client/harborcli/scan"
+	"github.com/AimAlex/harbor-client/harborcli/scanners"
 )
 
 // Default harbor API HTTP client.

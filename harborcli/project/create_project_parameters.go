@@ -15,7 +15,7 @@ import (
 	cr "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
 
-	"gitlab.4pd.io/liwenhao/pineapple/pineapple/apigen/harborcli/models"
+	"github.com/AimAlex/harbor-client/models"
 )
 
 // NewCreateProjectParams creates a new CreateProjectParams object
