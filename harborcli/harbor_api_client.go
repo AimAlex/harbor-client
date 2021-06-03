@@ -12,6 +12,7 @@ import (
 
 	"github.com/AimAlex/harbor-client/harborcli/artifact"
 	"github.com/AimAlex/harbor-client/harborcli/auditlog"
+	"github.com/AimAlex/harbor-client/harborcli/chart_repository"
 	"github.com/AimAlex/harbor-client/harborcli/icon"
 	"github.com/AimAlex/harbor-client/harborcli/preheat"
 	"github.com/AimAlex/harbor-client/harborcli/products"
@@ -19,6 +20,7 @@ import (
 	"github.com/AimAlex/harbor-client/harborcli/repository"
 	"github.com/AimAlex/harbor-client/harborcli/scan"
 	"github.com/AimAlex/harbor-client/harborcli/scanners"
+	"github.com/AimAlex/harbor-client/harborcli/version"
 )
 
 // Default harbor API HTTP client.
@@ -65,6 +67,7 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *HarborAPI 
 	cli.Transport = transport
 	cli.Artifact = artifact.New(transport, formats)
 	cli.Auditlog = auditlog.New(transport, formats)
+	cli.ChartRepository = chart_repository.New(transport, formats)
 	cli.Icon = icon.New(transport, formats)
 	cli.Preheat = preheat.New(transport, formats)
 	cli.Products = products.New(transport, formats)
@@ -72,6 +75,7 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *HarborAPI 
 	cli.Repository = repository.New(transport, formats)
 	cli.Scan = scan.New(transport, formats)
 	cli.Scanners = scanners.New(transport, formats)
+	cli.Version = version.New(transport, formats)
 	return cli
 }
 
@@ -120,6 +124,8 @@ type HarborAPI struct {
 
 	Auditlog auditlog.ClientService
 
+	ChartRepository chart_repository.ClientService
+
 	Icon icon.ClientService
 
 	Preheat preheat.ClientService
@@ -134,6 +140,8 @@ type HarborAPI struct {
 
 	Scanners scanners.ClientService
 
+	Version version.ClientService
+
 	Transport runtime.ClientTransport
 }
 
@@ -142,6 +150,7 @@ func (c *HarborAPI) SetTransport(transport runtime.ClientTransport) {
 	c.Transport = transport
 	c.Artifact.SetTransport(transport)
 	c.Auditlog.SetTransport(transport)
+	c.ChartRepository.SetTransport(transport)
 	c.Icon.SetTransport(transport)
 	c.Preheat.SetTransport(transport)
 	c.Products.SetTransport(transport)
@@ -149,4 +158,5 @@ func (c *HarborAPI) SetTransport(transport runtime.ClientTransport) {
 	c.Repository.SetTransport(transport)
 	c.Scan.SetTransport(transport)
 	c.Scanners.SetTransport(transport)
+	c.Version.SetTransport(transport)
 }
